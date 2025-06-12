@@ -1,0 +1,17 @@
+{
+  "name": "estadistica-fusbol",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy --minify",
+    "cf-typegen": "wrangler types --env-interface CloudflareBindings"
+  },
+  "dependencies": {
+    "@hono/zod-validator": "^0.7.0",
+    "@neondatabase/serverless": "^1.0.1",
+    "hono": "^4.7.11"
+  },
+  "devDependencies": {
+    "prettier": "^3.5.3",
+    "wrangler": "^4.4.0"
+  }
+}

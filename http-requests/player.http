@@ -1,0 +1,29 @@
+### GET all players
+GET http://localhost:8787/jugadores?pretty
+
+### GET one player by id
+GET http://localhost:8787/jugadores/1?pretty
+
+### POST new player
+POST http://localhost:8787/jugadores
+Content-Type: application/json
+
+{
+  "name": "Mario Cares",
+  "country": "Chile",
+  "birth_at": "1990-05-16"
+}
+
+### PUT new player
+PUT http://localhost:8787/jugadores/13
+Content-Type: application/json
+
+{
+  "name": "Mario Cares 1",
+  "country": "Chile 1",
+  "birth_at": "1991-05-16"
+}
+
+### DELETE player by id
+DELETE http://localhost:8787/jugadores/14
+Content-Type: application/json
