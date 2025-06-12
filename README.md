@@ -21,7 +21,11 @@ const app = new Hono<{ Bindings: CloudflareBindings }>()
 ```
 ## ENDPOINTS
 GET https://estadistica-fusbol.mario-cares-c.workers.dev/jugadores?pretty
+
 GET https://estadistica-fusbol.mario-cares-c.workers.dev/jugadores/1?pretty
+
 POST https://estadistica-fusbol.mario-cares-c.workers.dev/jugadores
+
 PUT https://estadistica-fusbol.mario-cares-c.workers.dev/jugadores/1
+
 DELETE https://estadistica-fusbol.mario-cares-c.workers.dev/jugadores/1
