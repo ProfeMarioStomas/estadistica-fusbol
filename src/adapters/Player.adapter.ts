@@ -5,12 +5,14 @@ export class PlayerAdapter implements IPlayer {
   name: string;
   country: string;
   birth_at: string;
+  team: string;
 
   constructor(adaptee: Record<string, any>) {
     this.id = Number(adaptee.id);
     this.name = adaptee.name;
     this.country = adaptee.country;
     this.birth_at = adaptee.birth_at;
+    this.team = adaptee.team;
   }
 
   toJson() {
@@ -19,6 +21,7 @@ export class PlayerAdapter implements IPlayer {
       name: this.name,
       country: this.country,
       birth_at: this.birth_at,
+      team: this.team,
     };
   }
 }
@@ -36,4 +39,5 @@ export const playerToParameters = (player: IPlayer) => [
   player.name,
   player.country,
   player.birth_at,
+  player.team,
 ];

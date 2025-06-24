@@ -27,3 +27,31 @@ Content-Type: application/json
 ### DELETE player by id
 DELETE http://localhost:8787/jugadores/14
 Content-Type: application/json
+
+### GET all teams
+GET http://localhost:8787/equipos?pretty
+
+### GET one team by id
+GET http://localhost:8787/equipos/11?pretty
+
+### POST new team
+POST http://localhost:8787/equipos
+Content-Type: application/json
+
+{
+  "name": "Iquique FC",
+  "league": "Chile"
+}
+
+### PUT new team
+PUT http://localhost:8787/equipos/11
+Content-Type: application/json
+
+{
+  "name": "Iquique FC 1",
+  "league": "Chile 1"
+}
+
+### DELETE team by id
+DELETE http://localhost:8787/equipos/11
+Content-Type: application/json

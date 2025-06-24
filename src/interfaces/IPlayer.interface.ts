@@ -3,4 +3,5 @@ export interface IPlayer {
   name: string;
   country: string;
   birth_at: string;
+  team: string;
 }

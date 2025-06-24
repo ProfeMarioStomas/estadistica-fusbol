@@ -1,8 +1,20 @@
 import { Hono } from "hono";
 import playerRoute from "./routes/player.route";
 import { prettyJSON } from "hono/pretty-json";
+import { cors } from "hono/cors";
+import teamRoute from "./routes/team.route";
 
 const app = new Hono();
+
+app.options("*", (c) => {
+  return c.text("ok", {
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "GET,POST,PUT,DELETE,OPTIONS",
+      "Access-Control-Allow-Headers": "Content-Type,Authorization",
+    },
+  });
+});
 
 app.use(prettyJSON());
 
@@ -11,4 +23,5 @@ app.get("/", (c) => {
 });
 
 app.route("/jugadores", playerRoute);
+app.route("/equipos", teamRoute);
 export default app;
