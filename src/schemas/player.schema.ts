@@ -9,5 +9,9 @@ export const playerSchema = z.object({
     .string("Debe tener únicamente letras")
     .min(3, "Como mínimo debe tener 3 caracteres")
     .max(50, "Como máximo puede tener hasta 50 caracteres"),
+  team: z
+    .string("Debe tener únicamente letras")
+    .min(3, "Como mínimo debe tener 3 caracteres")
+    .max(50, "Como máximo puede tener hasta 50 caracteres"),
   birth_at: z.iso.date("Formato fecha incorrecto"),
 });
