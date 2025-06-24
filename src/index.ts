@@ -1,8 +1,8 @@
 import { Hono } from "hono";
 import playerRoute from "./routes/player.route";
 import { prettyJSON } from "hono/pretty-json";
-import { cors } from "hono/cors";
 import teamRoute from "./routes/team.route";
+import { cors } from "hono/cors";
 
 const app = new Hono();
 
@@ -15,6 +15,10 @@ app.options("*", (c) => {
     },
   });
 });
+
+app.use("*", cors({
+  origin: "http://127.0.0.1:5500"
+}));
 
 app.use(prettyJSON());
 
